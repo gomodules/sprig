@@ -14,6 +14,7 @@ import (
 	"time"
 
 	util "github.com/Masterminds/goutils"
+	"github.com/dustin/go-humanize"
 	"github.com/huandu/xstrings"
 	"github.com/shopspring/decimal"
 )
@@ -382,4 +383,17 @@ var genericMap = map[string]interface{}{
 
 	// json path:
 	"jp": jsonpathFn,
+
+	// humanize:
+	"toBytes":          toBytes,
+	"mustToBytes":      mustToBytes,
+	"toIBytes":         toIBytes,
+	"mustToIBytes":     mustToIBytes,
+	"ordinal":          humanize.Ordinal,
+	"fromBytes":        humanize.ParseBytes,
+	"toComma":          toComma,
+	"mustToComma":      mustToComma,
+	"ftoa":             humanize.Ftoa,
+	"formatNumber":     formatNumber,
+	"mustFormatNumber": mustFormatNumber,
 }

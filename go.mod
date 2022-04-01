@@ -5,6 +5,7 @@ go 1.17
 require (
 	github.com/Masterminds/goutils v1.1.1
 	github.com/Masterminds/semver/v3 v3.1.1
+	github.com/dustin/go-humanize v1.0.1-0.20220316001817-d5090ed65664
 	github.com/google/uuid v1.1.1
 	github.com/huandu/xstrings v1.3.1
 	github.com/mitchellh/copystructure v1.0.0
