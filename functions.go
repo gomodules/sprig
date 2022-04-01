@@ -379,4 +379,7 @@ var genericMap = map[string]interface{}{
 	// URLs:
 	"urlParse": urlParse,
 	"urlJoin":  urlJoin,
+
+	// json path:
+	"jp": jsonpathFn,
 }
