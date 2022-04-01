@@ -47,6 +47,7 @@ func TestTypeIs(t *testing.T) {
 		t.Error(err)
 	}
 }
+
 func TestTypeIsLike(t *testing.T) {
 	f := "foo"
 	tpl := `{{if typeIsLike "string" .}}t{{else}}f{{end}}`
@@ -60,6 +61,7 @@ func TestTypeIsLike(t *testing.T) {
 		t.Error(err)
 	}
 }
+
 func TestKindIs(t *testing.T) {
 	f := &fixtureTO{"hello", "world"}
 	tpl := `{{if kindIs "ptr" .}}t{{else}}f{{end}}`

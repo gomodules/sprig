@@ -83,5 +83,4 @@ func TestUrlJoin(t *testing.T) {
 	for expected, urlMap := range urlTests {
 		assert.EqualValues(t, expected, urlJoin(urlMap))
 	}
-
 }

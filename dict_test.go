@@ -43,6 +43,7 @@ func TestUnset(t *testing.T) {
 		t.Error(err)
 	}
 }
+
 func TestHasKey(t *testing.T) {
 	tpl := `{{- $d := dict "one" 1 "two" 222222 -}}
 	{{- if hasKey $d "one" -}}1{{- end -}}
@@ -96,6 +97,7 @@ func TestPick(t *testing.T) {
 		}
 	}
 }
+
 func TestOmit(t *testing.T) {
 	tests := map[string]string{
 		`{{- $d := dict "one" 1 "two" 222222 }}{{ omit $d "one" | len -}}`:         "1",

@@ -62,6 +62,7 @@ func TestQuote(t *testing.T) {
 		t.Error(err)
 	}
 }
+
 func TestSquote(t *testing.T) {
 	tpl := `{{squote "a" "b" "c"}}`
 	if err := runt(tpl, `'a' 'b' 'c'`); err != nil {
@@ -154,6 +155,7 @@ func TestSortAlpha(t *testing.T) {
 		assert.NoError(t, runt(tpl, expect))
 	}
 }
+
 func TestBase64EncodeDecode(t *testing.T) {
 	magicWord := "coffee"
 	expect := base64.StdEncoding.EncodeToString([]byte(magicWord))
@@ -171,6 +173,7 @@ func TestBase64EncodeDecode(t *testing.T) {
 		t.Error(err)
 	}
 }
+
 func TestBase32EncodeDecode(t *testing.T) {
 	magicWord := "coffee"
 	expect := base32.StdEncoding.EncodeToString([]byte(magicWord))
@@ -194,7 +197,7 @@ func TestGoutils(t *testing.T) {
 		`{{abbrev 5 "hello world"}}`:           "he...",
 		`{{abbrevboth 5 10 "1234 5678 9123"}}`: "...5678...",
 		`{{nospace "h e l l o "}}`:             "hello",
-		`{{untitle "First Try"}}`:              "first try", //https://youtu.be/44-RsrF_V_w
+		`{{untitle "First Try"}}`:              "first try", // https://youtu.be/44-RsrF_V_w
 		`{{initials "First Try"}}`:             "FT",
 		`{{wrap 5 "Hello World"}}`:             "Hello\nWorld",
 		`{{wrapWith 5 "\t" "Hello World"}}`:    "Hello\tWorld",

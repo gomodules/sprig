@@ -2,9 +2,10 @@ package sprig
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"strconv"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestUntil(t *testing.T) {
@@ -18,6 +19,7 @@ func TestUntil(t *testing.T) {
 		}
 	}
 }
+
 func TestUntilStep(t *testing.T) {
 	tests := map[string]string{
 		`{{range $i, $e := untilStep 0 5 1}}{{$i}}{{$e}}{{end}}`:     "0011223344",
@@ -33,8 +35,8 @@ func TestUntilStep(t *testing.T) {
 			t.Error(err)
 		}
 	}
-
 }
+
 func TestBiggest(t *testing.T) {
 	tpl := `{{ biggest 1 2 3 345 5 6 7}}`
 	if err := runt(tpl, `345`); err != nil {
@@ -46,6 +48,7 @@ func TestBiggest(t *testing.T) {
 		t.Error(err)
 	}
 }
+
 func TestMaxf(t *testing.T) {
 	tpl := `{{ maxf 1 2 3 345.7 5 6 7}}`
 	if err := runt(tpl, `345.7`); err != nil {
@@ -57,6 +60,7 @@ func TestMaxf(t *testing.T) {
 		t.Error(err)
 	}
 }
+
 func TestMin(t *testing.T) {
 	tpl := `{{ min 1 2 3 345 5 6 7}}`
 	if err := runt(tpl, `1`); err != nil {
@@ -117,6 +121,7 @@ func TestToFloat64(t *testing.T) {
 		t.Errorf("Expected 102")
 	}
 }
+
 func TestToInt64(t *testing.T) {
 	target := int64(102)
 	if target != toInt64(int8(102)) {
@@ -301,7 +306,7 @@ func TestRound(t *testing.T) {
 }
 
 func TestRandomInt(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		min int
 		max int
 	}{
