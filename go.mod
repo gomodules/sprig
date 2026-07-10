@@ -1,8 +1,6 @@
 module github.com/Masterminds/sprig/v3
 
-go 1.22.1
-
-toolchain go1.23.1
+go 1.25.0
 
 require (
 	github.com/Masterminds/goutils v1.1.1
@@ -15,11 +13,10 @@ require (
 	github.com/shopspring/decimal v1.4.0
 	github.com/spf13/cast v1.7.0
 	github.com/stretchr/testify v1.9.0
-	golang.org/x/crypto v0.27.0
+	golang.org/x/crypto v0.52.0
 	gomodules.xyz/encoding v0.0.8
 	gomodules.xyz/jsonpath v0.0.2
 	gomodules.xyz/mergo v0.3.13
-
 )
 
 require (
